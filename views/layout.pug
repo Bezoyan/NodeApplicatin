@@ -2,8 +2,23 @@ doctype html
 html
   head
     title article.am
-    link(rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
   body
+    nav.navbar.navbar-inverse
+      .container
+        .navbar-header
+          button.navbar-toggler.collapesed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navabar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar  
+          a.navbar-brand(href='/') Zoya's Project
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='/') Home 
+            li
+              a(href='/articles/add') Add Article
     .container    
       block content
       br
